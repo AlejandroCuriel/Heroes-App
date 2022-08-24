@@ -1,6 +1,10 @@
-import React from 'react'
+import React from "react";
+import { AuthProvider } from "./auth/context/AuthProvider";
+import { AppRouter } from "./router/AppRouter";
 export const HeroesApp = () => {
   return (
-    <h1>HeroesApp</h1>
-  )
-}
+    <AuthProvider>
+      <AppRouter />
+    </AuthProvider>
+  );
+};
